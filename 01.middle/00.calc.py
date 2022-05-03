@@ -6,8 +6,6 @@ def 함수명(매개변수):
     처리로직2
 '''
 # --- 함수선언 ---
-from bdb import Breakpoint
-
 #return 값 = 호출한 쪽에 값을 주고 함수를 종료한다.
 #값이 없으면 그냥 함수를 종료한다. (for문의 break)
 def plus(a, b):

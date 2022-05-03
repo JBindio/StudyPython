@@ -1,13 +1,17 @@
 # 입출력
+import string
+
+
 print('물어보세요 : ',end='')
-name = '이름이 뭐야?'
-age = '몇살이야?'
+name = '이름이 뭐야? 성함 성명'
+age = '몇살이야? 나이'
 bye = '잘가 안녕'
+
 while True:
     a = input()
-    if a == name:
+    if a in name:
         print('내이름은 홍길동 이야')
-    elif a == age:
+    elif a in age:
         print('99살 이야')
     elif a == bye:
         print('안녕! 또 만나')
