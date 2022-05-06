@@ -1,7 +1,7 @@
-# 주소록 프로그램 v1.0
+# 주소록 프로그램 v1.1
 # 작성일 : 2022-05-04
 # 작성자 : 이정빈
-# 설  명 : ?
+# 설  명 : 파이썬 학습 기반 주소록 프로그램 만들기
 
 import os
 
@@ -75,18 +75,18 @@ def set_contact() -> Contact:
          return contact # 잘못되면 None 리턴, contact 객체 리턴
 
 # 주소록 출력 함수
-def get_contact(lst_contact):
+def get_contact(lst_contact:list):
     for contact in lst_contact:
         print(contact)
 
 # 주소록 삭제 함수
-def del_contact(lst_contact, name):
+def del_contact(lst_contact:list, name):
     for i, contact in enumerate(lst_contact):
         if contact.name == name:
             del lst_contact[i]
 
 # 주소록 파일DB 저장 함수
-def save_contact(lst_contact):
+def save_contact(lst_contact:list):
     f = open('./02.advanced/db_contact.txt', mode='w', encoding='utf-8')
     for contact in lst_contact:
         f.write(contact.name + '/')
@@ -97,7 +97,7 @@ def save_contact(lst_contact):
     f.close() # close 필수!!
 
 # 주소록 파일DB 불러오기 함수
-def load_contact(lst_contact):
+def load_contact(lst_contact:list):
     f = open('./02.advanced/db_contact.txt', mode='r', encoding='utf-8')
     while True:
         line = f.readline()
