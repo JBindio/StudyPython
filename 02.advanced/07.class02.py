@@ -17,7 +17,7 @@ class Car(Vehicle): # Vehicle 클래스를 상속받은 Car 클래스 생성
     name = '자동차'
     brand = '현대'
 
-    def __init__(self, color=None) -> None:
+    def __init__(self, color = None) -> None:
         super().__init__(color)
         print(f'{color}색 {self.brand} {self.name} 생성!')
 
