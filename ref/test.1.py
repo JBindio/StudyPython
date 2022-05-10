@@ -1,4 +1,4 @@
-# 5번문제
+# 1번문제
 import os
 def run():
     clearConsole()
@@ -7,19 +7,19 @@ def run():
         if sel_menu == 1:
             clearConsole()
             try:
-                x = int(input('수행할 구구단의 숫자를 입력하세요.\n'))
+                radius = float(input("반지름을 입력하세요.\n"))
+                area = 3.141592 * radius ** 2
                 clearConsole()
-                print(f'[{x}단 시작]')
-                for y in range(1, 10):
-                    print(f'{x}*{y}={x*y:2d}',end=' ')
-                    print()
-                input('계속 하려면 엔터를 누르세요')
+                print('입력하신 원의 반지름은',f'{radius}입니다.')
+                print('원의 넓이는',f'{area}입니다.')
+                input('계속 하려면 엔터를 누르세요.')
                 clearConsole()
                 continue
             except Exception as e:
                 print('에러가 발생했습니다. 에러코드 = 'f'{e}')
-                input('계속 하려면 엔터를 누르세요')
+                input('계속 하려면 엔터를 누르세요.')
                 clearConsole()
+
         elif sel_menu == 2:
             break
         else:
@@ -27,11 +27,11 @@ def run():
 
 def get_menu():
     str_menu = ('===========================\n'
-                '구구단 프로그램 v1.5\n'
+                '원 넓이 계산기 프로그램 v1.1\n'
                 '===========================\n'
-                '1. 구구단 실행하기\n'
+                '1. 넓이 구하기\n'
                 '2. 종료\n'
-                '===========================\n')
+                '===========================')
     print(str_menu)
     menu = 0 # 초기화
     # 0 ~ 9 숫자외 ValueError 발생

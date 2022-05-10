@@ -1,23 +1,23 @@
-# 2번문제
+# 4번문제
 import os
 def run():
     clearConsole()
     while True:
+        
         sel_menu = get_menu()
         if sel_menu == 1:
+            i = 0
             clearConsole()
-            dic = {'수성':'Mercury', '금성':'Venus', '지구':'Earth', '화성':'Mars',
-                   '목성':'Jupiter', '토성':'Saturn', '천왕성':'Uranus', '혜왕성':'Neptune '}
             try:
-                name = input('찾으실 행성의 한글이름을 입력하세요.\n')
+                i = int(input('역순으로 변환할 숫자를 입력하세요.\n'))
                 clearConsole()
-                print('입력하신 행성은', f'{name}', '입니다.')
-                print('입력하신 행성의 영문이름은', f'{dic[name]}', '입니다.')
+                print('입력한 숫자는', f'{i}', '입니다.')
+                print('입력한 숫자의 역순은', f'{int(str(i)[::-1])}', '입니다.')
                 input('계속 하려면 엔터를 누르세요')
                 clearConsole()
                 continue
-            except Exception:
-                print('에러가 발생했습니다.' f'{name}','은(는)없는 행성입니다')
+            except Exception as e:
+                print('에러가 발생했습니다. 에러코드 = 'f'{e}')
                 input('계속 하려면 엔터를 누르세요')
                 clearConsole()
         elif sel_menu == 2:
@@ -27,11 +27,11 @@ def run():
 
 def get_menu():
     str_menu = ('===========================\n'
-                '행성이름 찾기 프로그램 v1.1\n'
+                '숫자 역순 변환 프로그램 v1.4\n'
                 '===========================\n'
-                '1. 행성이름 영문검색\n'
+                '1. 숫자 역순 변환하기\n'
                 '2. 종료\n'
-                '===========================\n')
+                '===========================')
     print(str_menu)
     menu = 0 # 초기화
     # 0 ~ 9 숫자외 ValueError 발생
