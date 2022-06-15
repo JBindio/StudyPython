@@ -1,6 +1,6 @@
 # 파일 입출력 2 - 읽기
 
-f = open('./temp.txt', mode= 'r', encoding= 'utf-8')
+f = open('./file/temp.txt', mode= 'r', encoding= 'utf-8')
 
 # t = f.read() # 전체 읽기(잘 쓰지않음)
 while True:
